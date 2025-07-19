@@ -1,0 +1,5 @@
+# .gitignore
+.env
+*.pem
+*.key
+.aws/
