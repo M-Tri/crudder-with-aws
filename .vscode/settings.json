@@ -1,0 +1,14 @@
+{
+  "conventionalCommits.scopes": [
+    "setup",
+    "feature",
+    "fix",
+    "docs",
+    "test",
+    "chore",
+    "refactor",
+    "perf",
+    "style",
+    "ci"
+  ]
+}
