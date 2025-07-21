@@ -1,7 +1,7 @@
 #!/bin/bash
 #Sets variables from the DO_NOT_COMMIT.env file to shell env variables.
 set -a
-source setup.env
+source DO_NOT_COMMIT.env
 set +a
 
 #Prints confirmation:
