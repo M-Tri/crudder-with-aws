@@ -1,11 +1,11 @@
 # Week 0 — Billing and Architecture
-### Completed tasks:
+### Completed Tasks
 * Created user account
 * Set up AWS CLI, IAM, policy, roles...
 * Created budget
 * Created alarm
 
-### Project chart
+### Project Chart
 
 ![Cart](./images/aws_project_chart.svg)
 
@@ -33,7 +33,7 @@ env | grep ACCOUNT_ID
   `
 ---
 
-### Important concepts:
+### Important Concepts
 * Access Key lets you access all AWS services your permissions allow.
 * API Key lets you access only one specific AWS service.
 * BFG Repo-Cleaner ,git filter-repo ,trufflehog (finds verified vs unverified keys; Active vs not-active keys) ...
