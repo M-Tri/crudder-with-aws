@@ -9,7 +9,7 @@
 
 ![Cart](./images/aws_project_chart.svg)
 
-## Commands:
+### Commands:
 
 * Save account id in a shell env variable:
 
