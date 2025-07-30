@@ -87,12 +87,30 @@ docker stop $(docker ps -q)
 
 - Create a Dockerfile inside backend-flask
 - Get an image from Docker hub
-- Run:
+- Run locally:
+ - Move to backend-flask file
+ - Make sure that you ran: conda deactivate
  - source docker-venv-backend-flask/bin/activate
  - pip install -r requirements.txt
- - python3 -m flask run --host=0.0.0.0 --port=4567
  - Environment set in the app:
   - export FRONTEND_URL="*"
   - export BACKEND_URL="*"
 - python3 -m flask run --host=0.0.0.0 --port=4567
 - Visit: http://localhost:4567/api/activities/home
+
+- Run with image:
+  - Unset un-needed env variables : unset BACKEND_URL FRONTEND_URL
+  - Then, move current directory to 'aws-bootcamp-cruddur' folder
+  - Now, in vscode, navigate to docker extension tab. There you will find confirmation that the image has been created
+  - docker run --rm -p 4567:4567 -it backend-flask
+  - http://localhost:4567/api/activities/home
+  - You need to explicitly pass them in when you run the container:
+    - **Option 1**: 
+      - export FRONTEND_URL="*"
+      - export BACKEND_URL="*"
+      then,
+      - docker run -e FRONTEND_URL -e BACKEND_URL backend-flask
+    - **Option 2**:
+      - Set and run at the same time : docker run -e FRONTEND_URL="*" -e BACKEND_URL="*" backend-flask
+
+  - Go to : http://localhost:4567/api/activities/home
