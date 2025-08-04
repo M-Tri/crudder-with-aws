@@ -9,6 +9,9 @@ services:
     environment:
       BACKEND_URL: "http://backend-flask:4567"
       FRONTEND_URL: "http://frontend-react-js:3000"
+      OTEL_SERVICE_NAME: 'backend-flask'
+      OTEL_EXPORTER_OTLP_ENDPOINT: "https://api.honeycomb.io"
+      OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=${HONEYCOMB_API_kEY}"
     volumes:
       - ./backend-flask:/backend-flask
     command: python3 -m flask run --host=0.0.0.0 --port=4567 --reload

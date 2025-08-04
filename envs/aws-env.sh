@@ -1,8 +1,8 @@
 #!/bin/bash
-#Sets variables from the DO_NOT_COMMIT.env file to shell env variables.
-set -a
-source DO_NOT_COMMIT.env
-set +a
+# Load and export all variables from DO_NOT_COMMIT.env into the current shell session
 
-#Prints confirmation:
-echo "AWS CLI environment is set up for this session"
+set -a                      # Enable auto-export of variables
+source DO_NOT_COMMIT.env    # Load and export variables
+set +a                      # Disable auto-export
+
+echo "Environment variables are set up for this session"
