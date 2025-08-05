@@ -1,6 +1,6 @@
-# Week 1 — App Containerization
+## Week 1 — App Containerization
 
-### Commands
+#### Commands
 #### Docker
 
 - Memory
@@ -132,14 +132,14 @@ docker stop $(docker ps -q)
 - Understand the differences between removing images vs removing containers.
 
 
-### Set up the project frontend
+#### Set up the project frontend
 - cd frontend-react-js/
 - install npm
 - Create file Dockerfile in frontend, add : image. 
   - FROM: node:16.18, you’re starting with a prebuilt container image that already has Node installed in it.
 - Go back to main file aws-bootcamp-cruddur
 
-### Build both frontend/backend using a .yml and docker compose lib (connects all)
+#### Build both frontend/backend using a .yml and docker compose lib (connects all)
 
 - run : docker compose -f docker compose.yaml up -d --build. 
   - Note: You do not have 'docker-compose' but you do have 'docker compose' installed.
@@ -158,3 +158,16 @@ Error: when i update backend files, browser does not detect it live.
   - Frontend -> /app
 - recompose and run.
 
+#### Documentation with OpenAPI, swagger-jsdoc, express-openapi, postman, readme
+- Gathers all info concerning API from your code into one file. This can be used as a quick reference.
+- OpenAPI tools like swagger-jsdoc or express-openapi just collect and organize all the details about your API — routes, parameters, request/response formats — into one clear, standard document (the OpenAPI spec).
+- You can open openapi-3.0.yml with swagger extension and get an UI rendering of your API spec.
+- You can also open .yml file and then go to the OpenAPI extension tab.
+#### Set up dynamodb
+- https://github.com/100DaysOfCloud/challenge-dynamodb-local
+
+#### Install postgres client
+
+- brew services start postgresql@13
+- brew services list
+- psql
