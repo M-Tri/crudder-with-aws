@@ -13,6 +13,7 @@
   - **export VAR=value** is passed along the children processes. Ex: Terminal is parent, and new process 'vim text' is child. VAR is only initialized in both.
   - But once you close the terminal, that environment is destroyed — so the variable is gone in both cases.
   - To keep them in the terminal, You need to manually put **VAR=value** or **export VAR=value** in the (~/.bashrc) or (~/.bash_profile). But the same logic will apply. For example, if you set **VAR=value** in the (~/.bashrc) then it will be set in the interactive shell and child process will not inherit it.
+- Using 'export' will pass env variables down in sub-shells but not in parallel shells.
 - Interactive vs login: Opening new tab is usually login, then, opening a new terminal tab or window (usually non-login, interactive). This is to avoid re-running heavy environment 
 setups every time you open a new shell tab.
 - If you only set VAR=value or export VAR=value in ~/.bashrc, and then open a login shell, that variable may not be there — unless your login shell explicitly sources ~/.bashrc.
