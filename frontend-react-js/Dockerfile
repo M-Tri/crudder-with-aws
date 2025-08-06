@@ -2,9 +2,9 @@ FROM node:16.18
 
 ENV PORT=3000
 
-WORKDIR /app
+WORKDIR /frontend-react-js
 
-COPY . .
+COPY . /frontend-react-js
 
 RUN npm install
 
